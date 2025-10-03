@@ -1,0 +1,288 @@
+/* Reset et variables CSS */
+:root {
+    --primary-color: #2c3e50;
+    --accent-color: #e74c3c;
+    --secondary-color: #34495e;
+    --text-color: #2c3e50;
+    --text-light: #7f8c8d;
+    --background-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    --card-shadow-hover: 0 15px 40px rgba(0, 0, 0, 0.15);
+    --border-radius: 12px;
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: var(--background-gradient);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+/* Container principal */
+.login-container {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: var(--border-radius);
+    box-shadow: var(--card-shadow);
+    padding: 3rem 2.5rem;
+    width: 100%;
+    max-width: 420px;
+    transition: var(--transition);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.login-container:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-2px);
+}
+
+/* En-tête */
+.login-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.login-title {
+    color: var(--primary-color);
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.02em;
+}
+
+.login-subtitle {
+    color: var(--text-light);
+    font-size: 0.95rem;
+    font-weight: 400;
+}
+
+/* Logo/Icône manga */
+.manga-icon {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 1.5rem;
+    background: linear-gradient(45deg, var(--accent-color), #ff6b6b);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    color: white;
+    box-shadow: 0 4px 15px rgba(231, 76, 60, 0.3);
+}
+
+/* Formulaire */
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* Groupes de champs */
+.form-group {
+    position: relative;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+    font-weight: 500;
+    font-size: 0.9rem;
+    letter-spacing: 0.02em;
+}
+
+.form-control {
+    width: 100%;
+    padding: 0.875rem 1rem;
+    border: 2px solid #e9ecef;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: var(--transition);
+    background: #fafafa;
+    color: var(--text-color);
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: var(--accent-color);
+    background: white;
+    box-shadow: 0 0 0 3px rgba(231, 76, 60, 0.1);
+    transform: translateY(-1px);
+}
+
+.form-control:hover:not(:focus) {
+    border-color: #d1d5db;
+    background: white;
+}
+
+/* Messages d'alerte */
+.alert {
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.alert-danger {
+    background: linear-gradient(135deg, #fee2e2, #fecaca);
+    color: #dc2626;
+    border: 1px solid #f87171;
+}
+
+.alert-info {
+    background: linear-gradient(135deg, #dbeafe, #bfdbfe);
+    color: #1d4ed8;
+    border: 1px solid #60a5fa;
+}
+
+/* Bouton de connexion */
+.btn-primary {
+    background: linear-gradient(135deg, var(--accent-color), #ff6b6b);
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    text-transform: none;
+    letter-spacing: 0.02em;
+    box-shadow: 0 4px 15px rgba(231, 76, 60, 0.3);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(231, 76, 60, 0.4);
+    filter: brightness(1.05);
+}
+
+.btn-primary:active {
+    transform: translateY(0);
+    box-shadow: 0 3px 10px rgba(231, 76, 60, 0.3);
+}
+
+/* Section "Remember me" */
+.remember-section {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 1rem 0;
+}
+
+.remember-section input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: var(--accent-color);
+}
+
+.remember-section label {
+    color: var(--text-light);
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+/* Liens */
+.auth-links {
+    text-align: center;
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #e9ecef;
+}
+
+.auth-links a {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: var(--transition);
+}
+
+.auth-links a:hover {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
+/* Message utilisateur connecté */
+.user-info {
+    background: linear-gradient(135deg, #d1fae5, #a7f3d0);
+    color: #065f46;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    border: 1px solid #34d399;
+    text-align: center;
+}
+
+.user-info a {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.user-info a:hover {
+    text-decoration: underline;
+}
+
+/* Animations d'entrée */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.login-container {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    .login-container {
+        padding: 2rem 1.5rem;
+        margin: 1rem;
+    }
+    
+    .login-title {
+        font-size: 1.75rem;
+    }
+    
+    .manga-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+    }
+}
+
+/* États de focus accessibles */
+.form-control:focus-visible,
+.btn-primary:focus-visible {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 2px;
+}
+
+/* Amélioration de l'accessibilité */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
